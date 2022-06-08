@@ -1,10 +1,16 @@
 .floating-container {
+    box-sizing: border-box;
+    border: 2px solid transparent;
     height: 10rem;
     width: 20rem;
     background-color:goldenrod;
     display: grid;
     grid-template-rows: repeat(2, auto);
     grid-template-columns: auto;
+}
+
+.apply-border {
+    border: 2px solid blue;
 }
 
 .center {

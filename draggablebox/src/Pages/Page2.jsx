@@ -1,9 +1,11 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { usePosition } from '../Context';
 import './Styles.css';
 
 const Page2 = () => {
   const navigate = useNavigate();
+  const { setBorder, dispatch } = usePosition();
   return (
     <div className="page">
         <nav className="nav">
@@ -16,7 +18,10 @@ const Page2 = () => {
           </div>   
         </main>
         <footer className="footer">
-            <span onClick={()=>navigate('/', {replace: true})}>⬅ Back</span>
+            <span onClick={()=>{
+              setBorder(true)
+              navigate('/', {replace: true})
+              dispatch({type: "CENTER", payload: 'center'})}}>⬅ Back</span>
         </footer>
     </div>
   )

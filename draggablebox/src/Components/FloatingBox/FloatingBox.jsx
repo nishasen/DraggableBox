@@ -4,7 +4,7 @@ import { usePosition } from '../../Context';
 import './FloatingBox.css';
 
 const FloatingBox = () => {
-    const {state, dispatch} = usePosition();
+    const {border, state, dispatch} = usePosition();
     const positionText = state.position[0].toUpperCase()+state.position.slice(1);
     const [showPosition, setShowPosition] = useState({x: 0, y: 0})
     const trackPos = (data) => {
@@ -25,7 +25,7 @@ const FloatingBox = () => {
             onDrag={(e, data) => trackPos(data)}
             onStop={()=>setShowPosition(state.cordinates)}
             >
-    <div className="floating-container handle">
+    <div className={`floating-container handle ${border ? 'apply-border' : ''}`}>
         <div className="drag-text">Drag me around...</div> 
         <div className="position-text">{state.position==='center' || state.position==='bottom-right' ? positionText : 'Floating...'}</div> 
     </div>
