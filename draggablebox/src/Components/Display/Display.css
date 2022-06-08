@@ -1,0 +1,6 @@
+.display-box {
+    box-sizing: border-box;
+    height: 400px;
+    background-color: grey;
+    width: 100%;
+}

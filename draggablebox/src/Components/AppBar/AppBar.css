@@ -1,0 +1,83 @@
+.appbar {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0.5rem;
+    height: 4rem;
+    background-color: black;
+    color: blanchedalmond;
+}
+
+.header-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem
+}
+
+.header {
+    font-size: 2rem;
+}
+
+.keyboard-actions {
+    display: flex;
+    flex-direction: column;
+    color: orange
+}
+
+.bars {
+    display: none;
+}
+
+.tooptip-container {
+    position: relative;
+}
+
+.tooltip {
+    position: absolute;
+    width: 10rem;
+    height: 5rem;
+    background-color: black;
+    top: 2rem;
+    right: 2rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid orange;
+}
+
+@media only screen and (max-width: 900px) {
+    
+    .positioning {
+        flex-direction: column;
+        gap: 0.5;
+        align-items: flex-start;
+    }
+
+}
+
+@media only screen and (max-width: 800px) {
+
+    .keyboard-actions {
+        display: none;
+    }
+    
+    .bars {
+        display: block;
+    }
+
+}
+
+@media only screen and (max-width: 400px) {
+
+    .header-resize {
+        flex-direction: column;
+        gap: 0;
+        align-items: flex-start;
+    }
+
+    .positioning {
+        flex-direction: row;
+    }
+    
+}
+

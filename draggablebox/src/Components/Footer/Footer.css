@@ -1,0 +1,11 @@
+.footer {
+    background-color: black;
+    color: palegoldenrod;
+    font-size: 1.7rem;
+    text-align: center;
+    height: 100%
+}
+
+span {
+    cursor: pointer;
+}
